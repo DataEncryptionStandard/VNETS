@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>パラメータ</title>
+    </head>
+    <body>
+        <pre id="sentence">
+            吾輩は猫である。名前はまだ無い。
+            どこで生れたかとんと見当がつかぬ。
+            何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</pre>
+    </body>
+    <script>
+        let params = (new URL(document.location)).searchParams;
+        let color = params.get('color'); 
+        let  ObjSentence = document.getElementById("sentence");
+        ObjSentence.style.color=color;
+    </script>
+</html>
